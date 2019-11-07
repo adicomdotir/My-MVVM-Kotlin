@@ -5,14 +5,14 @@ import ir.adicom.app.mymvvmkotlin.datasource.NameModel
 
 class MainModel {
     fun loadData(mainModelCallback: MainModelCallback) {
-        Handler().postAtTime({
+        Handler().postDelayed({
             val names = ArrayList<NameModel>()
             names.add(NameModel("Amir"))
             names.add(NameModel("Hassan"))
             names.add(NameModel("Abbas"))
             names.add(NameModel("Yashar"))
             mainModelCallback.onDataFetched(names)
-        }, 5000)
+        }, 3000)
     }
 }
 
